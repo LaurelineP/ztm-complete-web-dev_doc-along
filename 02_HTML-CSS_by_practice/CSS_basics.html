@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Basics</title>
+		<link rel="stylesheet" type="text/css" href="./assets/styles/index.css">
+	</head>
+	<body>
+		<header>
+			<iframe type="text/html" src="shared/navigation.html" style="border:none;" height="110px"></iframe>
+		</header>
+	</body>
+	<main id="page-content">
+		<h1>CSS basics</h1>
+		<div>
+			<p>
+				Here we will discuss about commonly <abbr title="Cascading Style Sheet">CSS</abbr>.
+				<br>CSS is a bit like the skin on a body/character, it allows to display custom visual aspect
+				<br>for the current backbone that here may be associated to HTML.
+			</p>
+			<p>
+				CSS Syntax:
+				<ul>
+					<li>A CSS selector: CSS will need to target specific(s) element(s) in the DOM to be able to apply some style</li>
+					<li>A CSS rule: is what is the entire code between curly braces - this defines how the selector will be displayed</li>
+					<li>A CSS property and its value: is always bound to a value ( making a pair of property/value ). 
+						<br>The property is within the curly braces always preceding by a colon followed by a value 
+						<br>and semi colon to end the property definition;
+					</li>
+				</ul>
+				<code>
+					&lt;SELECTOR&gt; {<br>
+						&nbsp;&nbsp;&lt;PROPERTY&gt;: &lt;VALUE&gt;;<br>
+						&nbsp;&nbsp;&lt;PROPERTY&gt;: &lt;VALUE&gt;;<br>
+						&nbsp;&nbsp;&lt;PROPERTY&gt;: &lt;VALUE&gt;;<br>
+					}
+					...
+				</code>
+			</p>
+	
+			<!-- Selectors -->
+			<details>
+				<summary><strong>CSS selectors:</strong></summary>
+				<p>"Selectable" elements can be:</p>
+				<table>
+					<thead>
+						<tr>
+							<th>Description</th>
+							<th>CSS syntax</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>HTML tags elements:</td>
+							<td><code>&lt;TAG-NAME&gt;</code></td>
+						</tr>
+						<tr>
+							<td>HTML id ( <code>id=""</code> attribute in a tag ):</td>
+							<td><code>#&lt;ID-NAME&gt;</code></td>
+						</tr>
+						<tr>
+							<td>HTML classes ( <code>class=""</code> attribute in a tag ): </td>
+							<td><code>.&lt;CLASS-NAME&gt;</code></td>
+						</tr>
+						<tr>
+							<td>HTML any attribute ( <code><code>&lt;ATTRIBUTE&gt;="<CLASS-NAME>"</code> </td>
+							<td>
+								<code>[&lt;ATTR&gt;="&lt;VALUE&gt;"]</code>
+								<br><code>[&lt;ATTR&gt;~="&lt;VALUE&gt;"]</code>
+								<br><code>[&lt;ATTR&gt;^="&lt;VALUE&gt;"]</code>
+								<br><code>[&lt;ATTR&gt;$="&lt;VALUE&gt;"]</code>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<ul>
+					<li><u>Syntax:</u> &lt;p&gt; ... &lt;/p&gt;</li>
+					<li><u>Example:</u> <p>This is a paragraph text</p></li>
+				</ul>
+			</details>
+		
+	
+			<!-- Properties -->
+			<details>
+				<summary><strong>CSS properties:</strong></summary>
+				<p>CSS properties can be:</p>
+				<ul>
+					<li>HTML tags element</li>
+				</ul>
+				
+				<br>Headers represent the hierarchy of title and subtitles
+				<br>They are are going from <code>h1</code> to <code>h6</code> going Generally
+				<br>from the most important to the less important text title
+				</p>
+		
+				<ul>
+					<li>
+						<p><u>Syntax:</u> 	<code>&lt;h1&gt;...&lt;/h1&gt;</code></p>
+					</li>
+					<li>
+						<p><u>Example:</u></p>
+					<samp>
+						<h1>Title with <code>h1</code></h1>
+						<h2>Title with <code>h2</code></h2>
+						<h3>Title with <code>h3</code></h3>
+						<h4>Title with <code>h4</code></h4>
+						<h5>Title with <code>h5</code></h5>
+						<h6>Title with <code>h6</code></h6>
+					</samp>
+					</li>
+				</ul>
+		
+			</details>
+		
+			<!-- Box models -->
+			<details>
+				<summary><strong>Lists:</strong></summary>
+				<p>
+				There are to different kind of HTML list: <strong>unordered list</strong> (<code>ul</code>) and <strong>ordered list</strong> (<code>ol</code>).
+				<br>Unordered list is a list that have bullets for list items while unordered list as characters to enumerate each items.
+				<br>Lists doe come with specific children elements being the <strong>list item</strong> <code>li</code>
+				<br>The lists could be nested within another list item creating a listed tree
+				</p>
+		
+				<ul>
+		
+					<li><u>Syntax for <code>ul</code>:</u> &lt;<strong>ul</strong>&gt; &lt;li&gt; .... &lt;li&gt; &lt;/<strong>ul</strong>&gt;</li>
+					<li><u>Syntax for <code>ol</code>:</u> &lt;<strong>ol</strong>&gt; &lt;li&gt; .... &lt;li&gt; &lt;/<strong>ol</strong>&gt;</li>
+					<li><u>Example:</u>
+						<p>Unordered list</p>
+						<ul>
+							<li>list item 1</li>
+							<li>list item 2</li>
+							<li>list item 3</li>
+						</ul>
+						<i>Note: the above are dotted list already nested as it is used to explain this content
+							<br>(this is why those are circles and not filled dot)</i>
+						<br>
+						<br>
+						<p>Ordered list</p>
+							<ol>
+								<li>list item 1</li>
+								<li>list item 2</li>
+								<li>list item 3</li>
+							</ol>
+						</li>
+					</li>
+		
+					
+				</ul>
+			</details>
+		
+			<details>
+				<summary><strong>Image:</strong></summary>
+				<p>
+				There is an HTML tag that allows to display images from various formats.
+				<br>(.jpg, .jpeg, .gif, etc...)
+				<br> This is a self enclosing tag: meaning one tag both open and close itself,
+				<br> without needing a closing pair tag like we've seen so far.
+				</p>
+		
+				<ul>
+					<li><u>Syntax for <code>img</code>:</u> &lt;<strong>img src="any/paths" /</strong>&gt;
+					<li><u>Example:</u></li>
+				</ul>
+				<img src="https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
+					height="200px" />
+			</details>
+		
+			<!-- Buttons -->
+			<details>
+				<summary><strong>Buttons:</strong></summary>
+				<p>
+					Buttons are interactive HTML elements that the user could trigger by
+					<br>clicking on them.
+					<br>There are today, two ways to create a button:
+				</p>
+				<ul>
+					<li>using the <code>button</code> tags</li>
+					<li>using the <code>input</code> tag</li>
+				</ul>
+		
+				<!-- --------------------------- button element ---------------------------- -->
+				<ul>
+					<li><u>Syntax for <code>button</code>:
+						<br></u> &lt;<strong>button</strong> onclick="console.log('Hello world!')"&gt; ... &lt;<strong>/button</strong>&gt;
+						<p><u>Example:</u></p>
+					</li>
+				</ul>
+				<pre>	<button type="button" type="button" onclick="console.log('Hello world from button!')">Click me as a button</button></pre>
+		
+				<ul>
+					<li><u>Syntax for <code>input</code>:
+						<br></u> &lt;<strong>input</strong> type="button" onclick="console.log('Hello world from input!')" value="Click me as an input" <strong>/</strong>&gt;
+						<p><u>Example:</u></p>
+					</li>
+				</ul>
+				<pre>	</u> <input type="button" onclick="console.log('Hello world from input!')" value="Click me as an input" /></pre>
+		
+			</details>
+		
+
+			<!-- Buttons -->
+			<details open>
+				<summary><strong>Box Models</strong></summary>
+				<p>Resource: Box models represent how each element's layout is organized in the following order:
+					<br><i><a href="https://web.dev/learn/css/box-model/">Google: box models</a></i>
+				</p>
+				<div id="box-models_container">
+					<div id="box-models_description">
+						<ul>
+							<li><code>margin</code>: pushes the element from the outside</li>
+							<li><code>border</code>: wrapping the box with a border</li>
+							<li><code>padding</code>: pushes elements within</li>
+							<li><code>content</code>: the element content itself</li>
+						</ul>
+						<p>Note: Box models can be hovered <i>(CSS only)</i></p>
+					</div>
+					<div id="box-models_demonstration">
+						<div title="margin" class="box-model margin">
+							<span>margin</span>
+							<div title="border" class="box-model border">
+								<span>border</span>
+								<div title="padding" class="box-model padding">
+									<span>padding</span>
+									<div title="content" class="box-model content">
+										<span>content</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</details>
+		</div>
+	</main>
+</html>

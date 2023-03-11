@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Basics</title>
+		<link rel="stylesheet" type="text/css" href="./assets/styles/index.css">
+	</head>
+	<body>
+		<header>
+			<iframe type="text/html" src="shared/navigation.html" style="border:none;" height="110px"></iframe>
+		</header>
+	</body>
+	<main>
+		<p>Here we will discuss about commonly used tags but much more are out there.</p>
+		<!-- Headers h1-h6 -->
+		<details>
+			<summary><strong>Header tags:</strong></summary>
+			<p>
+			Header tags are text element allowing to organize the text by a hierarchy.
+			<br>Headers represent the hierarchy of title and subtitles
+			<br>They are are going from <code>h1</code> to <code>h6</code> going Generally
+			<br>from the most important to the less important text title
+			</p>
+	
+			<ul>
+				<li>
+					<p><u>Syntax:</u> 	<code>&lt;h1&gt;...&lt;/h1&gt;</code></p>
+				</li>
+				<li>
+					<p><u>Example:</u></p>
+				<samp>
+					<h1>Title with <code>h1</code></h1>
+					<h2>Title with <code>h2</code></h2>
+					<h3>Title with <code>h3</code></h3>
+					<h4>Title with <code>h4</code></h4>
+					<h5>Title with <code>h5</code></h5>
+					<h6>Title with <code>h6</code></h6>
+				</samp>
+				</li>
+			</ul>
+	
+		</details>
+	
+		<!-- Paragraph -->
+		<details>
+			<summary><strong>Paragraph tag:</strong></summary>
+			<p>
+			Paragraph is a text element allowing to semantically add a text in a HTML document file.
+			<br>Indeed, text not wrapped by a text element will still display however this is not
+			<br>a good practice as this will not help the <abbr title="Search Engine Optimization">SEO</abbr>
+			</p>
+	
+			<ul>
+	
+				<li><u>Syntax:</u> &lt;p&gt; ... &lt;/p&gt;</li>
+				<li><u>Example:</u> <p>This is a paragraph text</p></li>
+				
+			</ul>
+		</details>
+	
+		<!-- Lists -->
+		<details>
+			<summary><strong>Lists:</strong></summary>
+			<p>
+			There are to different kind of HTML list: <strong>unordered list</strong> (<code>ul</code>) and <strong>ordered list</strong> (<code>ol</code>).
+			<br>Unordered list is a list that have bullets for list items while unordered list as characters to enumerate each items.
+			<br>Lists doe come with specific children elements being the <strong>list item</strong> <code>li</code>
+			<br>The lists could be nested within another list item creating a listed tree
+			</p>
+	
+			<ul>
+	
+				<li><u>Syntax for <code>ul</code>:</u> &lt;<strong>ul</strong>&gt; &lt;li&gt; .... &lt;li&gt; &lt;/<strong>ul</strong>&gt;</li>
+				<li><u>Syntax for <code>ol</code>:</u> &lt;<strong>ol</strong>&gt; &lt;li&gt; .... &lt;li&gt; &lt;/<strong>ol</strong>&gt;</li>
+				<li><u>Example:</u>
+					<p>Unordered list</p>
+					<ul>
+						<li>list item 1</li>
+						<li>list item 2</li>
+						<li>list item 3</li>
+					</ul>
+					<i>Note: the above are dotted list already nested as it is used to explain this content
+						<br>(this is why those are circles and not filled dot)</i>
+					<br>
+					<br>
+					<p>Ordered list</p>
+						<ol>
+							<li>list item 1</li>
+							<li>list item 2</li>
+							<li>list item 3</li>
+						</ol>
+					</li>
+				</li>
+	
+				
+			</ul>
+		</details>
+	
+		<details>
+			<summary><strong>Image:</strong></summary>
+			<p>
+			There is an HTML tag that allows to display images from various formats.
+			<br>(.jpg, .jpeg, .gif, etc...)
+			<br> This is a self enclosing tag: meaning one tag both open and close itself,
+			<br> without needing a closing pair tag like we've seen so far.
+			</p>
+	
+			<ul>
+				<li><u>Syntax for <code>img</code>:</u> &lt;<strong>img src="any/paths" /</strong>&gt;
+				<li><u>Example:</u></li>
+			</ul>
+			<img src="https://images.unsplash.com/photo-1472457897821-70d3819a0e24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
+				height="200px" />
+		</details>
+	
+		<!-- Buttons -->
+		<details>
+			<summary><strong>Buttons:</strong></summary>
+			<p>
+				Buttons are interactive HTML elements that the user could trigger by
+				<br>clicking on them.
+				<br>There are today, two ways to create a button:
+			</p>
+			<ul>
+				<li>using the <code>button</code> tags</li>
+				<li>using the <code>input</code> tag</li>
+			</ul>
+	
+			<!-- --------------------------- button element ---------------------------- -->
+			<ul>
+				<li><u>Syntax for <code>button</code>:
+					<br></u> &lt;<strong>button</strong> onclick="console.log('Hello world!')"&gt; ... &lt;<strong>/button</strong>&gt;
+					<p><u>Example:</u></p>
+				</li>
+			</ul>
+			<pre>	<button type="button" type="button" onclick="console.log('Hello world from button!')">Click me as a button</button></pre>
+	
+			<ul>
+				<li><u>Syntax for <code>input</code>:
+					<br></u> &lt;<strong>input</strong> type="button" onclick="console.log('Hello world from input!')" value="Click me as an input" <strong>/</strong>&gt;
+					<p><u>Example:</u></p>
+				</li>
+			</ul>
+			<pre>	</u> <input type="button" onclick="console.log('Hello world from input!')" value="Click me as an input" /></pre>
+	
+		</details>
+	
+		<p>
+			After this last introductions regarding the input,
+			<br> it is time to focus more on it with <a href="./HTML_form.html">forms</a>.
+		</p>
+	</main>
+</html>
