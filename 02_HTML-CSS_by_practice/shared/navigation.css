@@ -1,0 +1,37 @@
+/* -------------------------------------------------------------------------- */
+/*                              NAVIGATION STYLE                              */
+/* -------------------------------------------------------------------------- */
+
+/* root elements display: removes unnecessary margin and set default font */
+html, body {
+	margin: 10px 0;
+	font-family: 'Avenir', sans-serif;
+}
+/* Nav text format */
+nav {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/* Nav layout: display all `li` in one row evenly spaced */
+nav ul {
+	display: flex;
+	justify-content: space-evenly;
+	padding: unset;
+}
+
+/* `li` display: without the bullets */
+nav li {
+	list-style: none;
+}
+
+/* `a` display: removed default link decoration */
+a, a:link, a:visited, a:active {
+	color: unset;
+	text-decoration: none;
+}
+
+/* `a` display: underlines links on hover */
+a:hover {
+	text-decoration: underline;
+}

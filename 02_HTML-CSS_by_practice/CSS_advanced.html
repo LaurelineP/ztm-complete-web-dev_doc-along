@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Advanced</title>
+		<link rel="stylesheet" type="text/css" href="./assets/styles/index.css">
+	</head>
+	<body>
+		<header>
+			<iframe type="text/html" src="shared/navigation.html" style="border:none;" height="110px"></iframe>
+		</header>
+	</body>
+	<main id="page-content">
+		<h1>CSS Advanced</h1>
+		<div>
+			<p>
+				Few others CSS aspect should be covered such as: critical render path, flexbox, responsive. 
+			</p>
+			<ul>
+				<li class="li-root"><u>Critical Render Paths</u>: loading files in HTML process</li>
+				<li class="li-root"><u>Box Models</u>: loading files in HTML process</li>
+				<li class="li-root"><u>Flexbox</u>: layout property allowing to organize and order elements</li>
+				<li class="li-root"><u>Animations:</u> with <code>transitions</code> and <code>transform</code></li>
+				<li class="li-root"><u>Responsiveness</u>: how to handle different device screen and adapting its content</li>
+			</ul>
+			
+			<!-- Critical Render Path -->
+			<details>
+				<summary><strong>Critical Render Paths:</strong></summary>
+				<p>The "Critical Render Path" is the concept behind loading imported source of code.
+					<br> Loading a file in HTML is a blocking process: meaning that each time the HTML
+					<br> loads a content ( media, file, fonts, etc... )	
+				</p>
+			</details>
+		
+			<!-- Box models -->
+			<details open>
+				<summary><strong>Box Models</strong></summary>
+				<p>Resource: Box models represent how each element's layout is organized in the following order:
+					<br><i><a href="https://web.dev/learn/css/box-model/">Google: box models</a></i>
+				</p>
+				<div id="box-models_container">
+					<div id="box-models_description">
+						<ul>
+							<li><code>margin</code>: pushes the element from the outside</li>
+							<li><code>border</code>: wrapping the box with a border</li>
+							<li><code>padding</code>: pushes elements within</li>
+							<li><code>content</code>: the element content itself</li>
+						</ul>
+						<p>Note: Box models can be hovered <i>(CSS only)</i></p>
+					</div>
+					<div id="box-models_demonstration">
+						<div title="margin" class="box-model margin">
+							<span>margin</span>
+							<div title="border" class="box-model border">
+								<span>border</span>
+								<div title="padding" class="box-model padding">
+									<span>padding</span>
+									<div title="content" class="box-model content">
+										<span>content</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</details>
+		</div>
+	</main>
+</html>
