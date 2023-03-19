@@ -56,14 +56,14 @@
 	
 			<!-- 1. Nestable element in li ? -->
 			<details>
-				<summary id="html-questions_1"><strong>Could we nest header tags within <code>li</code> tags?</strong></summary>
+				<summary><strong>Could we nest header tags within <code>li</code> tags?</strong></summary>
 				<p>Yes, list elements (<code>li</code>) can include headers tags along few other tags</p>
 			</details>
 	
 	
 			<!-- 2. Component concept implementation -->
 			<details >
-				<summary id="html-questions_2"><strong><code>iframe</code> or <code>embed</code> tag?</strong></summary>
+				<summary><strong><code>iframe</code> or <code>embed</code> tag?</strong></summary>
 				<p>
 					<code>iframe</code> or <code>embed</code> are element that allow to display files, media from other sources, contextualized in the element
 					The contextualization mentioned refers to being able to functionally interact with the content from the iframe contextualized in the current webpage
@@ -75,7 +75,7 @@
 	
 			<!-- 2. Component concept implementation -->
 			<details >
-				<summary id="html-questions_3"><strong>When to use <code>button</code> or <code>input</code> tags?</strong></summary>
+				<summary><strong>When to use <code>button</code> or <code>input</code> tags?</strong></summary>
 				<p>
 					<code>button</code> can accept child elements whereas <code>input</code> does not
 					<br> so if you need to customized a clickable element ( like adding an icon ) you may
@@ -85,6 +85,22 @@
 				</p>
 				
 				<p>Prefer using <code>iframe</code> as <code>embed</code> is deprecated.
+			</details>
+
+			<details >
+				<summary><strong>In a <code>table</code> row: can we nest rows and/or columns?</strong></summary>
+				<p>
+					A <code>table</code> can nest another inner rows and columns.
+					<br>To do so, we have to nest a whole <code>table</code> within a <code>td</code> tag
+				</p>
+			</details>
+
+			<details >
+				<summary><strong>In  <code>ul</code> or <code>ol</code>: is it possible add a text before the list items?</summary>
+				<p>
+					Yes, using A <code>template</code> tags, you could also add  can nest another inner rows and columns.
+					See documentation <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul#technical_summary">here</a>
+				</p>
 			</details>
 			
 		</ul>

@@ -4,7 +4,7 @@
 
 html {
 	margin: 0;
-	background-color: #DDD;
+	/* background-color: #EEE; */
 	font-family: 'Avenir', sans-serif;
 }
 
@@ -12,16 +12,28 @@ body {
 	margin: 20px
 }
 
+.card {
+	height: auto;
+	width: fit-content;
+	box-shadow: 0 1px 8px 2px #d0dfe785;
+	padding: 40px;
+	border-radius: 3px;
+	margin: 20px;
+}
+
+/* ---------------------------- IFRAME/NAV STYLE ---------------------------- */
 iframe {
 	width: 100%;
 	height: 80px;
 }
 
+
+
 main {
 	margin: 50px;
 }
 
-main h1 { text-align: center ;}
+main h1 { text-align: center; }
 
 /* `a` display: removed default link decoration */
 a, a:link, a:visited, a:active {
@@ -33,18 +45,45 @@ a:link {
 	text-decoration: underline;
 }
 
+/* ------------------------------- CODE STYLE ------------------------------ */
 code:not(:empty) { 
-	background-color: #CCC;
+	background-color: #daeaf275;
 	padding: 3px 8px;
 	border-radius: 3px;
 	color: #333;
 	display: inline-block;
+	margin: 1px;
 }
 
-input {
+/* ------------------------- INPUT AND BUTTON STYLE ------------------------- */
+input[type=button],
+input[type=submit],
+input[type=reset],
+button {
 	border: none;
 	border-radius: 3px;
-	padding: 2px 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	background-color: #FFF;
+	box-shadow: 0 1px 5px 1px #DDD;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #333;
+}
+
+input[type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+button:hover {
+	box-shadow: 0 1px 7px 1px #DDD;
+	color: #06F
+}
+
+input[type=button]:active,
+input[type=button]:active,
+input[type=button]:active,
+button:active {
+	box-shadow: 0 1px 3px 1px #DDD;
 }
 
 
@@ -60,6 +99,9 @@ li:not(.li-root) {
 	list-style-type: "🔹";
 }
 
+li.inherit {
+	list-style-type: inherit;
+}
 
 
 /* -------------------------------------------------------------------------- */
@@ -82,6 +124,15 @@ fieldset {
 	width: 400px;
 	margin: 20px
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                  HTML PAGE                                 */
+/* -------------------------------------------------------------------------- */
+#lists-demonstration,
+#buttons-demonstration {
+	display: flex;
+}
+
 
 /* -------------------------------------------------------------------------- */
 /*                                  FORM PAGE                                 */
@@ -125,24 +176,19 @@ fieldset input {
 	margin-top: 30px
 }
 
-[type=submit], [type=reset] {
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	padding: 10px;
-	margin: 10px;
-	box-shadow: 0 2px 10px 0px #CCC;
-	font-weight: 100;
-}
-
-[type=submit]:hover, [type=reset]:hover {
-	cursor: pointer;
-	box-shadow: 0 2px 10px 0px #bbb;
-
+form input[type=submit],
+form input[type=submit] {
+	margin: 0 20px;
 }
 
 [type=submit] ~ [type=reset] {
 	margin-right: 20px;
 }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  CSS PAGE                                  */
+/* -------------------------------------------------------------------------- */
 
 /* ------------------------------- BOX MODELS ------------------------------- */
 
@@ -205,5 +251,73 @@ fieldset input {
 .box-model.content {
 	height: auto;
 	background-color: white;
+}
+
+
+
+/* --------------------------------- FLEXBOX -------------------------------- */
+ table#table_flexbox {
+	background-color: #FFF;
+	margin: 20px;
+	border-radius: 3px;
+	box-shadow: 0 0 8px 2px #CCC;
+	/* prevents table to display all cell border and display one border instead */
+	border-collapse: collapse;
+ }
+ #table_flexbox td {
+	border:1px solid #DDD;
+	padding: 10px;
+}
+
+/* Targets all properties cells values */
+#table_flexbox tbody tr td:nth-child(2) {
+	font-weight: bolder;
+}
+
+
+/* .row-section: table's  stronger cells border line  */
+#table_flexbox tbody .row-section {
+	border-top: 2px solid #6CC;
+}
+
+#table_flexbox tbody li.pipe {
+	list-style-type: "|";
+}
+
+
+/* ------------------------ DEMONSTRATION BLOCK STYLE ----------------------- */
+ #flexbox_demonstration div {
+	display: flex;
+ }
+
+#flexbox_demonstration div #demo-application {
+	display: flex;
+	height: 50px;
+	padding: 5px;
+	margin: 10px;
+	width: 200px;
+	background-color: #6CC;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: default;
+}
+
+#demo-application > span {
+	align-self: flex-start;
+	content: " ";
+	transition: all 1s;
+
+}
+
+#demo-application > span:hover {
+	align-self: flex-end;
+}
+
+#demo-application > span:hover:after {
+	content: "🤣";
 }
 
