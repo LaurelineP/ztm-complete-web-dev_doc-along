@@ -6,6 +6,7 @@
 html, body {
 	margin: 10px 0;
 	font-family: 'Avenir', sans-serif;
+	overflow: hidden;
 }
 /* Nav text format */
 nav {
@@ -35,3 +36,4 @@ a, a:link, a:visited, a:active {
 a:hover {
 	text-decoration: underline;
 }
+
