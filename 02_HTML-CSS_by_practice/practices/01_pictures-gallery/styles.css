@@ -2,7 +2,7 @@
 html,
 body {
     margin: 10px 0;
-    font-family: "Avenir", sans-serif;
+    font-family: "Avenir", sans-serif, Arial;
     overflow: hidden;
 }
 
@@ -35,9 +35,6 @@ div#practice_pictures-gallery img:not(:hover) {
 }
 
 div#practice_pictures-gallery img:hover {
-    /* transform: scale(3); */
-    /* translate: 300px 50% 150%; */
-    /* transform: translate3d(20%, 0); */
     scale: 1.5;
     filter: unset;
     cursor: pointer;
