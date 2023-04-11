@@ -300,6 +300,7 @@ button:active {
 #element-description,
 #element-demonstration {
     display: flex;
+    flex-wrap: wrap;
 }
 
 li.inherit {
@@ -382,6 +383,12 @@ form input[type="submit"] {
 
 [type="submit"] ~ [type="reset"] {
     margin-right: 20px;
+}
+
+#image-demonstration img {
+    height: 200px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* -------------------------------------------------------------------------- */
