@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Course Doc JS Section" />
+		<meta name="theme-color" content="#FFF" />
+
+		<link rel="stylesheet" type="text/css" href="./assets/styles/index.css" />
+		<title>JS Basics</title>
+	</head>
+
+	<body>
+		<div id="layout_page">
+			<div id="background"></div>
+
+			<header id="layout_header">
+				<iframe
+					id="navigation"
+					title="navigation"
+					type="text/html"
+					src="shared/navigation.html"
+					style="border: none"
+					height="110px"
+				></iframe>
+			</header>
+
+			<main id="HTML" class="layout_content_container">
+				<aside class="layout_content_aside">
+					<div id="aside-content">
+						<h1>JS</h1>
+
+						<hr />
+
+						<ul>
+							<li><a href="#HTML-basics">HTML basics</a></li>
+							<ul>
+								<li>
+									<a href="#JS-basics_8-types">8 types/primitives</a>
+								</li>
+							</ul>
+						</ul>
+					</div>
+				</aside>
+
+				<div class="layout_content">
+					<!-- ----------------------------------------------------------------------- -->
+					<!--                               JS BASICS                               -->
+					<!-- ----------------------------------------------------------------------- -->
+					<section id="JS-basics">
+						<h2>JS Basics</h2>
+						<p>
+							Javascript is a programming language that works with HTML content but is also a scripting
+							language.
+							<br />
+							It is a dynamic typing high level language: Hight level programming language are easier to
+							<br />
+							read and write which allow js to recognize the value kind (type) on its own without having a
+							human
+							<br />
+							to explicitly specify
+						</p>
+
+						<div class="layout_content">
+							<details open id="JS-basics_8-types">
+								<summary><strong>8 Types</strong></summary>
+								<p>
+									There are 8 types in Javascript: values ' type (example words with letter are
+									different from numbers).
+									<br />
+									The programming language needs to understand the instruction and to do so it
+									provides tools
+									<br />
+									for people writing the code, to use to communicate a specific instruction
+								</p>
+								<div class="card">
+									<ul>
+										<li><code>number</code></li>
+										<li><code>boolean</code></li>
+										<li><code>array</code></li>
+										<li><code>object</code></li>
+										<li><code>symbol</code></li>
+										<li><code>undefined</code></li>
+										<li><code>null</code></li>
+									</ul>
+
+									<table>
+										<colgroup>
+											<col />
+											<col />
+											<col />
+										</colgroup>
+										<thead>
+											<tr>
+												<td>Type</td>
+												<td>Example</td>
+												<td>Is primitive or non-primitive</td>
+												<td>Note</td>
+											</tr>
+										</thead>
+										<tbody>
+											<!-- ------------------------------- 8 TYPES ------------------------------- -->
+											<tr>
+												<td><code>string</code></td>
+												<td>
+													<code>"This is a string"</code>
+													<code>'This is a string'</code>
+													<code>`This is a string`</code>
+												</td>
+												<td>is primitive</td>
+												<td>
+													<ul>
+														<li>
+															Content with letters between quotes are typed as
+															<code>string</code>
+														</li>
+														<li>
+															Notice the wrapping quotes for the text
+															<ul>
+																<li>either a pair of single quotes</li>
+																<li>either a pair of double quotes</li>
+																<li>
+																	either a pair of single back stick (template literal
+																	outputting strings)
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</td>
+											</tr>
+
+											<!-- ------------------------------- NUMBER -------------------------------- -->
+											<tr>
+												<td><code>number</code></td>
+												<td>
+													<code>3</code>
+													or
+													<code>-3</code>
+													- integer
+													<br />
+													<code>3.3</code>
+													- float
+													<br />
+													<code>NaN</code>
+													- Not A Number
+													<br />
+													<code>Infinity</code>
+													or
+													<code>- Infinity</code>
+													- max / min number reached
+												</td>
+												<td>is primitive</td>
+												<td>
+													<ul>
+														<li>
+															Numbers (without quotes) are typed as
+															<code>number</code>
+														</li>
+														<li>
+															Number can be
+															<ul>
+																<li>negative or positive</li>
+																<li>integers or floating numbers (with decimal)</li>
+																<li>
+																	<code>NaN</code>
+																	Is typed as
+																	<code>number</code>
+																	as it evaluates if a given input is a number.
+																	<code>
+																		console.log(typeof NaN)
+																		<span class="code-comment">//"number"</span>
+																	</code>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</td>
+											</tr>
+
+											<!-- ------------------------------- BIGINT ------------------------------- -->
+											<tr>
+												<td><code>bigInt</code></td>
+												<td>
+													<code>1n</code>
+													or
+												</td>
+												<td>is primitive</td>
+												<td>
+													<ul>
+														<li>syntax: characterized by a "n" appended to a number</li>
+														<li>
+															represents too large numeric values that a number cannot.
+														</li>
+														<li>loosely equal a number but not strictly</li>
+														<ul>
+															<li>
+																<code>
+																	1n === 1
+																	<span class="code-comment">//false</span>
+																</code>
+															</li>
+															<li>
+																<code>
+																	1n == 1
+																	<span class="code-comment">//true</span>
+																</code>
+															</li>
+															<li>
+																<code>
+																	1n <= 1
+																	<span class="code-comment">//true</span>
+																</code>
+															</li>
+															<li>
+																<code>
+																	1n >= 1
+																	<span class="code-comment">//true</span>
+																</code>
+															</li>
+															<li>
+																<code>
+																	1n < 2
+																	<span class="code-comment">//true</span>
+																</code>
+															</li>
+														</ul>
+														<li>can not be used with `Math` library</li>
+													</ul>
+												</td>
+											</tr>
+
+											<!-- ------------------------------- BOOLEAN ------------------------------- -->
+											<tr>
+												<td><code>boolean</code></td>
+												<td>
+													<code>true</code>
+													<br />
+													<code>false</code>
+												</td>
+												<td>is primitive</td>
+												<td>
+													Booleans represents the values
+													<code>true</code>
+													or
+													<code>false</code>
+												</td>
+											</tr>
+
+											<!-- ------------------------------- Undefined ------------------------------- -->
+											<tr>
+												<td><code>undefined</code></td>
+												<td><code>undefined</code></td>
+												<td>is primitive</td>
+												<td>
+													This is both a value and a reserved keyword.
+													<ul>
+														<li>
+															<code>undefined</code>
+															as a value: represents a value never defined / assigned
+															which JS wil automatically compute or assign to undefined
+														</li>
+														<li>
+															<code>undefined</code>
+															as a **global read-only** word: meaning this word is already
+															used by JavaScript and is not writable/re-assignable. It's
+															best to not create any variable with this word.
+															<a
+																href="https://262.ecma-international.org/5.1/#sec-15.1"
+																alt="MDN reserved keywords"
+															>
+																See more details about global's read only objects
+															</a>
+														</li>
+													</ul>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</details>
+
+							<details id="JS-basics_comparisons">
+								<summary><strong>Comparisons</strong></summary>
+								<p>
+									Comparisons outputs
+									<code>boolean</code>
+									s. The comparisons operator are similar to the mathematical ones.
+									<br />
+									It applies to numbers in general, can be applied to strings also
+									<br />
+									but those are not incompatible with other primitives (types).
+								</p>
+								<div class="flex card">
+									<ul>
+										<li>
+											<code>==</code>
+											: double equality (with 2 following operators - to avoid as possible)
+										</li>
+										<li>
+											<code>===</code>
+											: triple equality (with 3 following operators - always prefer triple
+											equality over the double equality)
+										</li>
+										<li>
+											<code>!=</code>
+											is not equal (with 2 following operators - to avoid)
+										</li>
+										<li>
+											<code>!==</code>
+											is not equal (with 3 following operators - to always prefer)
+										</li>
+										<li>
+											<code><=</code>
+											: inferior or equal
+										</li>
+										<li>
+											<code>>=</code>
+											: superior or equal
+										</li>
+										<li>
+											<code><</code>
+											: inferior
+										</li>
+										<li>
+											<code>></code>
+											: superior
+										</li>
+									</ul>
+								</div>
+							</details>
+
+							<details id="JS-basics_variables">
+								<summary><strong>Variables</strong></summary>
+								<p>
+									Variables is a way to store / save a value, an expression or an objects (object
+									literal or array) Storing values allows to save a value in order to re-use / rely on
+									them for later logic implementation or just to save the value.
+									<br />
+									<code>&lt;variable-keyword&gt; &lt;variable-name&gt; = &lt;value&gt;</code>
+								</p>
+								<p>There are 3 ways to implement them using different keywords</p>
+								<ul>
+									<li>
+										<code>var &lt;variable-name&gt;</code>
+										: old/regular way that can be overridden too easily which can leads to
+										unexpected behavior
+									</li>
+									<li>
+										<code>let &lt;variable-name&gt;</code>
+										: variable for anticipated cases where it is supposed to be overridden
+									</li>
+									<li>
+										<code>const &lt;variable-name&gt;</code>
+										: variable for primitives that would not change
+									</li>
+								</ul>
+							</details>
+
+							<details id="JS-basics_functions">
+								<summary><strong>Functions</strong></summary>
+								<p></p>
+							</details>
+
+							<details id="JS-basics_dataStructure">
+								<summary>
+									<strong>Data Structure</strong>
+								</summary>
+								<p></p>
+							</details>
+						</div>
+					</section>
+
+					<section id="JS-practice">
+						<details open id="JS-practice_calculator">
+							<summary>
+								<h3>JS Calculator:</h3>
+							</summary>
+							<p>
+								Make a calculator that sums - Bonus make a calculator that sums (previously done),
+								subtracts, divides, multiplies
+							</p>
+
+							<ul>
+								Using:
+								<li>variable declaration var</li>
+								<li>using prompt</li>
+								<li>using alert</li>
+								<li>if needed: to concatenate a string use the "+" operator to display the text</li>
+							</ul>
+							<a href="./practices/05_calculator/index.html" title="JS Calculator" target="_blank">
+								Live Exercise result
+							</a>
+						</details>
+					</section>
+					<hr />
+				</div>
+			</main>
+		</div>
+		<footer id="layout_footer">
+			<div>
+				<a id="back-to-top" href="#layout_page" target="_top" title="Back to the top"></a>
+			</div>
+		</footer>
+	</body>
+</html>
