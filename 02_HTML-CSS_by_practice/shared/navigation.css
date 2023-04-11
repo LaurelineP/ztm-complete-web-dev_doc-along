@@ -11,7 +11,7 @@ body {
     max-height: 100vh;
     display: flex;
     scroll-behavior: smooth;
-    font-family: "Avenir", sans-serif;
+    font-family: "Avenir", sans-serif, Arial;
     font-size: 14px;
     color: #444;
     overflow-x: hidden;

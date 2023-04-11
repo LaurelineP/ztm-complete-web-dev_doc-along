@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Course Doc CSS Section" />
+        <meta name="theme-color" content="#FFF" />
+
         <link
             rel="stylesheet"
             type="text/css"
@@ -18,6 +21,7 @@
 
             <header id="layout_header">
                 <iframe
+                    title="navigation"
                     id="navigation"
                     type="text/html"
                     src="shared/navigation.html"
@@ -83,6 +87,13 @@
                                 <li>
                                     <a href="#CSS-practices_animals-grid"
                                         >Animals grid</a
+                                    >
+                                </li>
+
+                                <li>
+                                    <a
+                                        href="#CSS-practices_responsive-layout-page"
+                                        >Responsive page</a
                                     >
                                 </li>
                             </ul>
@@ -211,7 +222,7 @@
                     <!--                              CSS ADVANCED                               -->
                     <!-- ----------------------------------------------------------------------- -->
                     <section id="CSS-advanced">
-                        <h1>CSS Advanced</h1>
+                        <h2>CSS Advanced</h2>
                         <div>
                             <p>
                                 Few others CSS aspect should be covered such as:
@@ -783,26 +794,38 @@
                                         </ul>
                                         <div>
                                             <img
+                                                height="auto"
+                                                width="auto"
                                                 src="./assets/pictures/pexels_camel-what.jpg"
                                                 alt="camel"
                                             />
                                             <img
+                                                height="auto"
+                                                width="auto"
                                                 src="./assets/pictures/pexels_cat-royal.jpg"
                                                 alt="cat with a crown"
                                             />
                                             <img
+                                                height="auto"
+                                                width="auto"
                                                 src="./assets/pictures/pexels_cat-toast.jpg"
                                                 alt=" cat wearing a toast around its face"
                                             />
                                             <img
+                                                height="auto"
+                                                width="auto"
                                                 src="./assets/pictures/pexels_dog-serious.jpg"
                                                 alt="doc wearing glasses next to an opened book"
                                             />
                                             <img
+                                                height="auto"
+                                                width="auto"
                                                 src="./assets/pictures/pexels_dog-swag.jpg"
                                                 alt="dog wearing a bonnet"
                                             />
                                             <img
+                                                height="auto"
+                                                width="auto"
                                                 src="./assets/pictures/pexels_monkey-smile.jpg"
                                                 alt="monkey wearing a grin smile"
                                             />
@@ -878,10 +901,45 @@
                             </details>
                         </div>
                     </section>
-                    <section id="CSS-practices">
-                        <details id="practice_pictures-gallery">
-                            <summary><h3>Practices</h3></summary>
 
+                    <hr />
+
+                    <!-- ----------------------------------------------------------------------- -->
+                    <!--                                PRACTICE                                 -->
+                    <!-- ----------------------------------------------------------------------- -->
+                    <section id="CSS-practices">
+                        <h2>Practices</h2>
+                        <details id="practice_pictures-gallery">
+                            <summary><h3>Pictures Gallery</h3></summary>
+                            <div
+                                id="CSS-practices_pictures_gallery"
+                                class="card"
+                            >
+                                <iframe
+                                    title="Preview pictures gallery"
+                                    id="CSS-practices_iframe_pictures_gallery"
+                                    type="text/html"
+                                    src="./practices/01_pictures-gallery/index.html"
+                                    style="border: none"
+                                ></iframe>
+                            </div>
+                        </details>
+
+                        <details id="#CSS-practices_robot">
+                            <summary><h3>Robot</h3></summary>
+                            <div id="CSS-practices_robot" class="card">
+                                <iframe
+                                    title="Preview Robot project"
+                                    id="CSS-practices_iframe_robot"
+                                    type="text/html"
+                                    src="./practices/02_robot/index.html"
+                                    style="border: none"
+                                ></iframe>
+                            </div>
+                        </details>
+
+                        <details id="#CSS-practices_animals-grid">
+                            <summary><h3>Animals Grid</h3></summary>
                             <div id="grid_description">
                                 <div id="grid_description_individal-item">
                                     <h3>Grid - Individual Items</h3>
@@ -960,39 +1018,46 @@
                                     </table>
                                 </div>
                             </div>
-
-                            <!-- -------------------------- PRACTICE GALLERY --------------------------- -->
-                            <div
-                                id="CSS-practices_pictures_gallery"
-                                class="card"
-                            >
-                                <iframe
-                                    id="CSS-practices_iframe_pictures_gallery"
-                                    type="text/html"
-                                    src="./practices/01_pictures-gallery/index.html"
-                                    style="border: none"
-                                ></iframe>
-                            </div>
-
-                            <!-- --------------------------- PRACTICE ROBOT ---------------------------- -->
-                            <div id="CSS-practices_robot" class="card">
-                                <iframe
-                                    id="CSS-practices_iframe_robot"
-                                    type="text/html"
-                                    src="./practices/02_robot/index.html"
-                                    style="border: none"
-                                ></iframe>
-                            </div>
-                            <!-- ---------------------------- PRACTICE GRID ---------------------------- -->
                             <div id="CSS-practices_animals-grid" class="card">
                                 <iframe
+                                    title="preview pictures gallery"
                                     id="CSS-practices_iframe_animals-grid"
                                     type="text/html"
-                                    src="./practices/04_animal-grid/index.html"
+                                    src="./practices/03_animal-grid/index.html"
                                     style="border: none"
                                 ></iframe>
                             </div>
                         </details>
+
+                        <details id="#CSS-practices_responsive-layout-page">
+                            <summary><h3>Responsive Layout Page</h3></summary>
+                            <div
+                                id="CSS-practices_responsive-layout-page"
+                                class="card"
+                            >
+                                <h1>Responsive Layout Page</h1>
+                                <a
+                                    href="/02_HTML-CSS_by_practice/practices/04_responsive-layout-page/index.html"
+                                    >See on a full page</a
+                                >
+                                <br />
+                                <iframe
+                                    title="Responsive Layout Page"
+                                    id="CSS-practices_iframe_responsive-layout-page"
+                                    type="text/html"
+                                    src="./practices/04_responsive-layout-page/index.html"
+                                    style="border: none"
+                                ></iframe>
+                            </div>
+                        </details>
+
+                        <!-- -------------------------- PRACTICE GALLERY --------------------------- -->
+
+                        <!-- --------------------------- PRACTICE ROBOT ---------------------------- -->
+
+                        <!-- ---------------------------- PRACTICE GRID ---------------------------- -->
+
+                        <!-- ------------------------- RESPONSIVE EXERCISE ------------------------- -->
                     </section>
                 </div>
             </main>
