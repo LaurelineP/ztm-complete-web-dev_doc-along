@@ -5,6 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/index.css">
+	<meta name="description" content="Course/Questioning along" />
+	<meta name="theme-color" content="#FFF"/>
+
 	<title>Project documenting</title>
 </head>
 
@@ -13,10 +16,12 @@
 		<div id="background"></div>
 
 		<header id="layout_header">
-			<iframe 
-			id="navigation"
-
-			type="text/html" src="shared/navigation.html" style="border:none;" height="110px"></iframe>
+			<iframe	
+				title="navigation"
+				id="navigation"
+				title="navigation"
+				type="text/html" src="shared/navigation.html" style="border:none;" height="110px">
+			</iframe>		
 		</header>
 		<main class="layout_content_container">
 			<div class="layout_content">
@@ -124,14 +129,20 @@
 					</details>
 		
 					<details >
-						<summary>When to choose <strong><code>canva</code> or <code>iframe</code> ?</summary>
+						<summary>When to choose <strong><code>canvas</code> or <code>iframe</code> ?</summary>
 						<p>
-							<!-- No, this is not mandatory.
-							<br>Both could be done.
-							<br>See few resources for those questioning questions:
-							<br> - <a href="https://css-tricks.com/wrapup-of-navigation-in-lists/">CSS Tricks - wrap-up of navigation lists</a>
-							<br> - <a href="https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/">CSS Tricks: navigation in list to be or not to be</a>
-							<br> - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul#technical_summary">here</a> -->
+							<code>canvas</code> is used to depict graphical element and the need to draw.
+							<br><code>iframe</code> is used to offer a preview with a context of a content, webpage and such.
+							<br>the iframe context is the ability to interact with the iframe content as if it was part of the
+							<br>current page.
+						</p>
+					</details>
+
+					<details >
+						<summary>Is there &lt;img/&gt; pseudo elements?</summary>
+						<p>
+							Pseudo element <code>::before</code>, <code>::after</code> can be used but using the property <code>content: url()</code>;
+							<br>other value for the content would not be applied;
 						</p>
 					</details>
 					
