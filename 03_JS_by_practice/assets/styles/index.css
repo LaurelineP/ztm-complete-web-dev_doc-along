@@ -35,6 +35,17 @@ header {
 	box-shadow: 0 2px 10px 0 #eef;
 }
 
+hr {
+	border-style: solid;
+	border: none;
+	height: 1px;
+	background-color: #999;
+}
+
+details > div {
+	margin: 20px;
+	padding: 10px;
+}
 /* ------------------------------ LAYOUT STYLE ------------------------------ */
 /* LAYOUT: container */
 #layout_page {
@@ -68,6 +79,8 @@ header {
 .layout_content_aside > #aside-content {
 	position: fixed;
 	background-color: #fff;
+	width: 100%;
+	max-width: inherit;
 }
 /** LAYOUT: second child */
 .layout_content {
@@ -112,6 +125,7 @@ main.layout_content {
 aside ul {
 	padding-inline-start: 30px;
 	padding-block-end: 20px;
+	/* width: 15vw; */
 }
 
 aside ul li {
@@ -248,6 +262,7 @@ a:link {
 
 ul > li {
 	padding: 4px 0;
+	width: 100%;
 }
 ul > li > a:hover {
 	color: var(--main_darker);
@@ -663,4 +678,12 @@ table#table_grid {
 
 .flex-wrap {
 	flex-wrap: wrap;
+}
+
+.full-width {
+	width: 95%;
+}
+
+.center {
+	margin: 0 auto;
 }

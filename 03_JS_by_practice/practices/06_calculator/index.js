@@ -19,6 +19,7 @@ var firstDigit;
 var secondDigit;
 var operationResult;
 var textOutput;
+var shouldRunAgain;
 
 // Ask user for inputs
 var choice = Number(prompt('Calculator: 3 modes are available:\n• choice 1: either you sum 2 values\n• choice 2: either you\'ll provide 3 values\n   a first number, an operand and a second number\n• choice 3:either you provide the full operation\n\nPlease write the number corresponding to your choice? (1,2 or 3)'));
@@ -34,7 +35,8 @@ if( choice === 1){
 	textOutput 		= "The result of "+ firstDigit +" + " + secondDigit +" is: " + operationResult;
 
 	alert(textOutput);
-	var shouldRunAgain = confirm("Continue?");
+
+	shouldRunAgain = confirm("Continue?");
 	if(shouldRunAgain) {
 		window.location.reload();
 	}
@@ -98,16 +100,16 @@ if( choice === 2){
 	if( !hasError ){
 	
 		// eval alternative
-		var calculationString = "" + firstDigit + " " + OPERAND  + " " + secondDigit;
-		var result = Function('return ' + calculationString )();
+		var operation = "" + firstDigit + " " + OPERAND  + " " + secondDigit;
+		var result = Function('return ' + operation )();
 		
-		alert('Result is ' + result);
+		textOutput = "The result of " + operation + " is: " + result;
+
+		alert(textOutput);
 	
 		// Handles continuation
-		var shouldRunAgain = confirm("Continue?");
-		if(shouldRunAgain) {
-			window.location.reload();
-		}
+		shouldRunAgain = confirm("Continue?");
+		if(shouldRunAgain) { window.location.reload(); }
 	}
 }
 
@@ -121,8 +123,9 @@ if( choice === 3){
 		var shouldRunAgain = confirm("Something went wrong, try again?");
 		window.location.reload();
 	}
-	alert( result );
-	var shouldRunAgain = confirm("Continue?");
+	textOutput = "The result of " + operation + " is: " + result;
+	alert( textOutput );
+	shouldRunAgain = confirm("Continue?");
 	if(shouldRunAgain) {
 		window.location.reload();
 	}

@@ -2,7 +2,6 @@
 	"tabWidth": 4,
 	"useTabs": true,
 	"bracketSpacing": true,
-	"proseWrap": "preserve",
-	"htmlWhitespaceSensitivity": "ignore",
+	"proseWrap": "always",
 	"printWidth": 120
 }
