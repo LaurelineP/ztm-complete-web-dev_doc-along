@@ -1,110 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>HTML form</title>
-</head>
-<body>
-	<iframe type="text/html" src="shared/navigation.html" style="border:none;" height="110px"></iframe>
-	<h1>Forms</h1>
-	<p>
-		Here we will discuss about forms, those bunch of input that one may come across filling
-		<br>for instance a profile account, or to register to a site and many other use cases.
-		<br><code>form</code> is an element that wrap multiple inputs of any kind to let the
-		<br>user provide information
-		<br><code>input</code>s are powerful and are polyvalent with the various type possibilities
-		<br>HTML provides.
-		<br>Form and input works together toward the same purpose: handling all data the user provides
-		<br>at once thanks to connected `attributes` ( name, for, value )
-	</p>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HTML form</title>
+	</head>
+	<body>
+		<iframe type="text/html" src="shared/navigation.html" style="border: none" height="110px"></iframe>
+		<h1>Forms</h1>
+		<p>
+			Here we will discuss about forms, those bunch of input that one may come across filling
+			<br />
+			for instance a profile account, or to register to a site and many other use cases.
+			<br />
+			<code>form</code>
+			is an element that wrap multiple inputs of any kind to let the
+			<br />
+			user provide information
+			<br />
+			<code>input</code>
+			s are powerful and are polyvalent with the various type possibilities
+			<br />
+			HTML provides.
+			<br />
+			Form and input works together toward the same purpose: handling all data the user provides
+			<br />
+			at once thanks to connected `attributes` ( name, for, value )
+		</p>
 
-	<details>
-		<summary><strong>Form:</strong></summary>
-		<p><u>Syntax form:</u>&lt;<strong>form action=""  method=""</strong>&gt; ... inputs ...&lt;<strong>/form</strong>&gt; </p>
-		<p><u>Syntax input:</u>&lt;<strong>input type="" onchange=""  for="" name="" placeholder="" value=""</strong>&gt;</p>
-		<ul>
-			<li><u>attribute type:</u> allow to handle it type<br> (radio, checkbox, date, color, submit, reset ...)
-			</li>
-			<li><u>specific to form's inputs:</u></li>
+		<details>
+			<summary><strong>Form:</strong></summary>
+			<p>
+				<u>Syntax form:</u>
+				&lt;
+				<strong>form action="" method=""</strong>
+				&gt; ... inputs ...&lt;
+				<strong>/form</strong>
+				&gt;
+			</p>
+			<p>
+				<u>Syntax input:</u>
+				&lt;
+				<strong>input type="" onchange="" for="" name="" placeholder="" value=""</strong>
+				&gt;
+			</p>
 			<ul>
-				<li>label tag: label tag is used to put an insight/description of the input next to it</li>
-				<li>for: allows to bind the value to the context</li>
-				<li>name: allows to bind the value to a for named element</li>
-				<li>value: the user value</li>
+				<li>
+					<u>attribute type:</u>
+					allow to handle it type
+					<br />
+					(radio, checkbox, date, color, submit, reset ...)
+				</li>
+				<li><u>specific to form's inputs:</u></li>
+				<ul>
+					<li>label tag: label tag is used to put an insight/description of the input next to it</li>
+					<li>for: allows to bind the value to the context</li>
+					<li>name: allows to bind the value to a for named element</li>
+					<li>value: the user value</li>
+				</ul>
+				<li><u></u></li>
 			</ul>
-			<li><u></u>
-			</li>
-		</ul>
-		<p><u>Example:</u></p>
+			<p><u>Example:</u></p>
+			<form action="" method="">
+				<p>imagine inputs/fields here</p>
+				<input type="submit" />
+			</form>
+			<p><u>Syntax:</u></p>
+		</details>
+
 		<form action="" method="">
-			<p>imagine inputs/fields here</p>
+			<label for="inputText">Input type text:</label>
+			<input type="text" name="inputText" />
+
+			<br />
+			<label for="inputEmail">Input type email:</label>
+			<input type="email" name="inputEmail" value="hello@gmail.com" required />
+
+			<br />
+			<label for="inputPassword">Input type password:</label>
+			<input type="password" name="inputPassword" value="1234" required />
+
+			<br />
+			<label for="inputTel">Input type telephone:</label>
+			<input type="tel" name="inputNumber" />
+
+			<br />
+			<label for="inputNumber">Input type number:</label>
+			<input type="number" name="inputNumber" />
+
+			<br />
+			<label for="inputDate">Input type date:</label>
+			<input type="date" name="inputDate" />
+
+			<br />
+			<label for="inputColor">Input type color:</label>
+			<input type="color" name="inputColor" />
+
+			<br />
+			<label for="inputRange">Input type range:</label>
+			<input type="range" min="0" max="6" value="2" name="inputRange" />
+
+			<br />
+			<label for="inputRange">Input type number:</label>
+			<input type="range" min="0" max="6" value="2" name="inputNumber" />
+
+			<br />
 			<input type="submit" />
+			<input type="reset" />
 		</form>
-		<p><u>Syntax:</u></p>
-	</details>
-	
-	<form action="" method="">
-		<label for="inputText">Input type text:</label>
-		<input type="text" name="inputText"/>
+		<p>Form submission raw content</p>
+		<code style="width: 500px; display: block; overflow-wrap: break-word" id="formSubmissionContent_raw"></code>
 
-		<br>
-		<label for="inputEmail">Input type email:</label>
-		<input type="email" name="inputEmail" value="hello@gmail.com"required/>
+		<p>Form submission processed content</p>
+		<code id="formSubmissionContent_processed"></code>
 
-		<br>
-		<label for="inputPassword">Input type password:</label>
-		<input type="password" name="inputPassword" value="1234" required/>
+		<script>
+			const urlContent = window.location.search;
+			const queryParamsList = [...new URLSearchParams(urlContent)];
+			const queryParamsDisplay = queryParamsList
+				.map((paramTuple) => `${paramTuple[0]}="${paramTuple[1]}"<br>`)
+				.join("");
 
-		<br>
-		<label for="inputTel">Input type telephone:</label>
-		<input type="tel" name="inputNumber"/>
-
-		<br>
-		<label for="inputNumber">Input type number:</label>
-		<input type="number" name="inputNumber"/>
-		
-		<br>
-		<label for="inputDate">Input type date:</label>
-		<input type="date" name="inputDate"/>
-
-		<br>
-		<label for="inputColor">Input type color:</label>
-		<input type="color" name="inputColor"/>
-
-
-		<br>
-		<label for="inputRange">Input type range:</label>
-		<input type="range" min="0" max="6" value="2" name="inputRange"/>
-
-
-		<br>
-		<label for="inputRange">Input type number:</label>
-		<input type="range" min="0" max="6" value="2" name="inputNumber"/>
-
-		<br>
-		<input type="submit" />
-		<input type="reset" />
-
-	</form>
-	<p>Form submission raw content</p>
-	<code  style="width:500px; display:block; overflow-wrap: break-word;" id="formSubmissionContent_raw"></code>
-
-	<p>Form submission processed content</p>
-	<code id="formSubmissionContent_processed"></code>
-
-	<script>
-		const urlContent = window.location.search;
-		const queryParamsList = [...new URLSearchParams(urlContent)];
-		const queryParamsDisplay = queryParamsList.map(paramTuple => (
-			`${paramTuple[0]}="${paramTuple[1]}"<br>`
-		)).join('')
-
-
-		document.getElementById('formSubmissionContent_raw').innerHTML = urlContent
-		document.getElementById('formSubmissionContent_processed').innerHTML = queryParamsDisplay
-	</script>
-</body>
+			document.getElementById("formSubmissionContent_raw").innerHTML = urlContent;
+			document.getElementById("formSubmissionContent_processed").innerHTML = queryParamsDisplay;
+		</script>
+	</body>
 </html>
-

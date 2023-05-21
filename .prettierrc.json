@@ -1,4 +1,7 @@
 {
 	"tabWidth": 4,
-	"bracket-spacing": true
+	"useTabs": true,
+	"bracketSpacing": true,
+	"proseWrap": "always",
+	"printWidth": 120
 }
