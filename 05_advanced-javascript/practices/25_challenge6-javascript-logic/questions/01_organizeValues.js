@@ -56,7 +56,7 @@ function organizeValues(arr){
 	const isTypedNumber = arr.every( v => typeof v === 'number');
 	const sorted = isTypedNumber
 		? arr.sort((a, b) => a - b)
-		: arr.sort((a) => typeof a === 'number' ? -1 : 1);
+		: arr.sort((a) => typeof a === 'number' ? 0 : 1);
 
 	return sorted.reduce((output, value, idx, _arr) => {
 		const innerArr = !isTypedNumber
@@ -66,7 +66,7 @@ function organizeValues(arr){
 
 		if(!!innerArr){
 			// does exist - can mutate
-			innerArr.push(value)
+			innerArr.push(value);
 		} else {
 			// does not exist, should create and/or add value
 			const _value = !isTypedNumber || (_arr[idx + 1] === value)
@@ -76,18 +76,3 @@ function organizeValues(arr){
 		return output;
 	},[]);
 }
-
-/**
- * Note: `organizeValues` it the implementation handling both:
- * - individuals and duplicates
- * - and type
- */
-console.info('[organizeValues]: test 1 - fn([1,2,4,591,392,391,2,5,10,2,1,1,1,20,20])', 
-	organizeValues([1,2,4,591,392,391,2,5,10,2,1,1,1,20,20])
-);
-console.info('[organizeValues]: test 2 - fn([1, "2", "3", 2]) - bonus check',
-	organizeValues([1, "2", "3", 2])
-);
-
-
-export default organizeValues;

@@ -61,3 +61,11 @@ a:focus {
 a:hover {
 	text-decoration: underline;
 }
+
+
+@media (width < 1250px) {
+	nav {
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+}

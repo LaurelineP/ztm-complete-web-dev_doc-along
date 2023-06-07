@@ -47,8 +47,3 @@ function getHexadecimalOrRGBFrom (color) {
 
 	return output;
 }
-console.info('[getHexadecimalOrRGBFrom]: test 1 - fn("#FFF")', getHexadecimalOrRGBFrom('#FFF'));
-console.info('[getHexadecimalOrRGBFrom]: test 2 - fn("#FFFFFF")', getHexadecimalOrRGBFrom('#FFFFFF'));
-console.info('[getHexadecimalOrRGBFrom]: test 3 - fn("rgb(255,255,255)")', getHexadecimalOrRGBFrom('rgb(255,255,255)'));
-
-export default getHexadecimalOrRGBFrom;

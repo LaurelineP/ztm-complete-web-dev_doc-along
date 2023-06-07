@@ -44,17 +44,5 @@ function findSumValues( arr, expectedSum ){
 		}
 
 	})
-	return result;
+	return result || null;
 }
-
-/**
- * Note: backward cases are when the expected number is the calculation of
- * the highest number + a previous number
- * - those are the one that really test the whole implementation's capacity
- */
-console.info('[findSumValues]: test 1 - fn([1,2,3], 4)', findSumValues([1,2,3], 4));
-console.info('[findSumValues]: test 1 - fn([1,2,3], 5) - backward handled', findSumValues([1,2,3], 5));
-console.info('[findSumValues]: test 1 - fn([0, 1, 5, 4 ,2, 3, 8], 8)', findSumValues([0, 1, 5, 4 ,2, 3, 8], 8));
-console.info('[findSumValues]: test 1 - fn([0, 1, 5, 4 ,2, 3, 8], 8) - backward handled', findSumValues([0, 1, 5, 4 ,2, 3, 8], 10));
-
-export default findSumValues;
