@@ -21,7 +21,7 @@ body {
 	height: 100%;
 	scroll-behavior: smooth;
 	font-family: "Avenir", sans-serif, Arial;
-	font-size: 18px;
+	font-size: 16px;
 	color: #444;
 	overflow-x: hidden;
 }
@@ -125,12 +125,12 @@ main.layout_content {
 aside ul {
 	padding-inline-start: 30px;
 	padding-block-end: 20px;
-	/* width: 15vw; */
 }
 
 aside ul li {
 	max-width: 85%;
 }
+
 
 section + hr {
 	margin: 30px 50px;
@@ -140,8 +140,10 @@ section {
 	padding: 30px 50px;
 }
 
-section h1 {
-	font-size: xx-large;
+section h1, h2, #aside-content h1  {
+	font-size: x-large;
+	text-transform: uppercase;
+	letter-spacing: .5px;
 }
 
 .card {
@@ -256,17 +258,17 @@ a:active {
 	text-decoration: none;
 }
 
-a:link {
-	text-decoration: underline;
-}
-
 ul > li {
 	padding: 4px 0;
 	width: 100%;
 }
 ul > li > a:hover {
 	color: var(--main_darker);
-	font-size: 15px;
+}
+
+.li-root {
+	text-transform: uppercase;
+	text-decoration:underline ;
 	font-weight: 500;
 }
 

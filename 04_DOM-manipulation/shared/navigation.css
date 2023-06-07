@@ -42,6 +42,7 @@ nav li {
 	display: flex;
 	align-items: center;
 	padding: 10px;
+	letter-spacing: .8px;
 }
 
 /* `a` display: removed default link decoration */
