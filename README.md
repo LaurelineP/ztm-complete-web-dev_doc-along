@@ -21,7 +21,7 @@ Questioning it may answer: How to organize efficiently an HTML based project?
 
     ***
 
-    # 01 HTML BY PRACTICE
+    # 01 HTML
 
     **<abbr title="HyperText Markup Language">HTML</abbr>** is the **skeleton** of any web page.  
     It allows to **structure semantically** a page content  
@@ -33,3 +33,16 @@ and **<abbr title="JavaScript">JS</abbr>**, a scripting language allowing to cre
 
 -   CSS: would be the skin on the HTML skeleton
 -   JS: would be the muscles on the HTML skeleton
+
+
+    # 02 CSS
+
+    **<abbr title="Cascading Style Sheet">CSS</abbr>** is like the **skin, clothes, visual accessories** for a web page.  
+    It allows to **style**,**animate**, **add visual effects** to a page content skeleton
+
+    # 03 JS
+    **<abbr title="JavaScript">JS</abbr>** represents the **logic** and **muscles** for a web page.  
+    It allows to enhance the user experience interactions / counter native browser behavior regarding
+    updating the page content, logically build HTML content using JS
+
+

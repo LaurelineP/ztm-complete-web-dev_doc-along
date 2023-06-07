@@ -297,7 +297,6 @@ a:link,
 a:visited,
 a:active {
 	color: unset;
-	text-decoration: none;
 }
 
 ul > li {
@@ -391,7 +390,6 @@ main#home section {
 
 main#home section > ul {
 	overflow-y: scroll;
-	padding-right: 50px;
 }
 fieldset {
 	background-color: #fff;
@@ -723,6 +721,8 @@ table#table_grid {
 	margin: unset;
 }
 
+
+
 /* -------------------------------------------------------------------------- */
 /*                        RESPONSIVE AND MEDIA QUERIES                        */
 /* -------------------------------------------------------------------------- */
@@ -764,8 +764,22 @@ table#table_grid {
 	}
 }
 
+/* -------------------------------------------------------------------------- */
+/*                            DEVELOPER ENVIRONMENT                           */
+/* -------------------------------------------------------------------------- */
+#typical-developer-workflow .card  ol {
+	flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+	align-content: center ;
+}
 
 
+#typical-developer-workflow .card  ol li {
+ margin: 10px;
+ width: 60%;
+
+}
 
 @media only screen and (min-width: 500px) {
 	#responsive-gradient {
