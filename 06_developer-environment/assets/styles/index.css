@@ -145,6 +145,8 @@ main.layout_content_container {
 	width: 100%;
 }
 
+
+iframe { border: none }
 /* ------------------------------ PAGE CONTENTS ----------------------------- */
 
 .layout_header iframe {
@@ -623,6 +625,7 @@ table#table_flexbox {
 iframe {
 	min-width: min-content;
 	min-height: min-content;
+	margin: 20px;
 }
 iframe + iframe {
 	margin-top: 20px;
@@ -789,6 +792,14 @@ iframe#DOM-manipulation_iframe_comparisons {
  margin: 10px;
  width: 60%;
 
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            DEVELOPER ENVIRONMENT                           */
+/* -------------------------------------------------------------------------- */
+#developer-environment_iframe_simple-portfolio {
+	width: 100%;
+	height: 40vh;
 }
 
 @media only screen and (min-width: 500px) {

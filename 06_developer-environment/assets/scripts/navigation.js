@@ -17,7 +17,7 @@ const getHrefId = (href) => href.split('#')[1];
 /** Closes all other "sections" ( tag `details` ) */
 const closeOtherSections = ( openedId = null ) => {
 	const sections = getOpenedDetails();
-	const closeSection = (detailsElement) => detailsElement.removeAttribute('open')
+	const closeSection = (detailsElement) => detailsElement.removeAttribute('open');
 
 	if( !!openedId ){
 		sections.forEach( sectionDetails => {
