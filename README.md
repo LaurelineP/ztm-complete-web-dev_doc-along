@@ -46,3 +46,14 @@ and **<abbr title="JavaScript">JS</abbr>**, a scripting language allowing to cre
     updating the page content, logically build HTML content using JS
 
 
+### Course progression demonstration
+The purpose of this project is also to share the skills progressions per major topics covered.
+Each presented topic ( project navigation list ) demonstrate what could be done with the topic
+The site content reflecting the course progression
+covered and how this Documenting project looks like
+- [HTML](https://laurelinep.github.io/ztm-complete-web-dev_doc-along/01_HTML_by_practice/)
+- [CSS ( with HTML )](https://laurelinep.github.io/ztm-complete-web-dev_doc-along/02_HTML-CSS_by_practice)
+- [JS](https://laurelinep.github.io/ztm-complete-web-dev_doc-along/03_JS_by_practice)
+- [DOM Manipulation](https://laurelinep.github.io/ztm-complete-web-dev_doc-along/04_DOM-manipulation)
+- [JS Advanced](https://laurelinep.github.io/ztm-complete-web-dev_doc-along/05_advanced-javascript)
+- [Developer Environment](https://laurelinep.github.io/ztm-complete-web-dev_doc-along/06_developer-environment)
