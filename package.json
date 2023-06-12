@@ -1,7 +1,7 @@
 {
 	"name": "ztm-complete-web-developer",
 	"version": "1.0.0",
-	"description": "**<abbr title=\"HyperText Markup Language\">HTML</abbr>** is the **skeleton** of any web page.   It allows to **structure semantically** a page content   *(specially since HTML5 with major semantic improvement)*.",
+	"description": "Documenting Course progression and give back to the community",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
