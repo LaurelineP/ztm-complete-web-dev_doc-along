@@ -369,7 +369,7 @@
 					</section>
 
 					<!-- ----------------------------------------------------------------------- -->
-					<!--                            DEVELOPER WORKFLOW                           -->
+					<!--                           DEVELOPER WORKFLOW                            -->
 					<!-- ----------------------------------------------------------------------- -->
 					<section id="typical-developer-workflow">
 						<h2>A Typical developer workflow</h2>
@@ -426,6 +426,164 @@
 								</div>
 							</details>
 						</div>
+					<!-- ----------------------------------------------------------------------- -->
+					<!--                            NODE BASIC SETUP                             -->
+					<!-- ----------------------------------------------------------------------- -->
+					<section id="node-basic-setup">
+						<h2>Node Basic Setup</h2>
+						<p>In the direction of being a fullstack developer, you'll hear about 
+							Node, NPM, Yarn : as they serve this purpose, as they are part of
+							the JavaScript ecosystem.
+						</p>
+
+						<!-- ----------------------------------------------------------------------- -->
+						<!--                           TOOLS EXPLANATIONS                            -->
+						<!-- ----------------------------------------------------------------------- -->
+						<details id="tools-explanations">
+							<summary><h3>Tools explanations</h3></summary>
+							<div class="card">
+								<ul>
+									<li>
+										<u>Back End and Front End</u><br>
+										What is a back-end ? A back end is an environment allowing to deal
+										with servers to host a website for instance, it allows to 
+										handle data, registration and more.
+										The Front end is meant to display an interface for the user to interact
+										but without a server hosting the front-end files there would not be any
+										site to go to.
+										<br><br>
+									</li>
+									<li>
+										<u>Node:</u><br>
+										Node is a JavaScript runtime engine which basically allows to run
+										JavaScript in the Back-End - JavaScript was originally used only for the
+										front-end interactions and the back-end was built with other programming languages
+										(php, python, etc ...)
+										Having Node as back-end enable the "fullstack" developer role and enable the use
+										of only one programming language to know to build things.
+										Node is great to deal with web servers and real time application.
+									</li>
+									<ul>
+										<li>
+											<a href="https://nodejs.org/en" target="_blank" >
+												Node Installation <br><br>
+											</a>
+										</li>
+										<li>
+											<a href="https://stackoverflow.com/a/42866388" target="_blank" >
+												Update Node<br><br>
+											</a>
+										</li>
+										<li>
+											<a href="https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/" target="_blank" >
+												Change Node version<br><br>
+											</a>
+										</li>
+										<li>
+											<a href="https://docs.npmjs.com/try-the-latest-stable-version-of-npm" target="_blank" >
+												Update NPM<br><br>
+											</a>
+										</li>
+									</ul>
+
+									<li>
+										<u>Package Managers:</u><br>
+										NPM (Node Package Manager) or Yarn are both package manager for Node environment.
+										NPM is delivered when installing Node / Yarn need to be installed.
+										NPM is also a CLI ( command line interface ) that allows a developer to
+										access packages that other developers developed ( we can see them as extra tools
+										to work with)
+									</li>
+									<ul>
+										<li>
+											<a href="https://www.npmjs.com/" target="_blank">
+												NPM
+											</a>
+										</li>
+										<li>
+											<a href="https://yarnpkg.com/" target="_blank">
+												Yarn<br><br>
+											</a>
+										</li>
+									</ul>
+
+									<li>
+										<u>NPM and Yarn:</u><br>
+										Like mentioned, packages are code that developers shared to avoid you from re-writing
+										a similar logic and to use them out of the box by just installing them using
+										the command line when a <code>package.json</code> file is set - for more information do
+										not hesitate to dive into the documentations
+										<br>NPM: <code>npm i &lt;package&gt;</code> or <code>npm install &lt;package&gt;</code>
+										<br>Yarn: <code>yarn add &lt;package&gt;</code>
+										<br><br>
+									</li>
+
+
+									<li>
+										<u><code>package.json</code> file</u><br>
+										The <code>package.json</code> file list all dependencies that your project has - dependencies
+										are the packages your project uses. There are 2 kinds of dependencies:
+										<br>
+										<br> ❖ regular <code>dependencies</code> : the ones required by your project to run
+										<br> ❖<code>dev-dependencies</code>:
+										<br> &nbsp; &nbsp;the ones used by the developer and not mandatory for the project
+											to correctly work.
+									</li>
+								</ul>
+							</div>
+						</details>
+
+						<details id="starting-setup">
+							<summary><h3>Starting Setup</h3></summary>
+							<div class="card">
+								<ol>
+									<li><u>Init Project</u>:
+										<br><code>npm init -y</code>: will init a <code>package.json</code> file
+										<br><br>
+									</li>
+									<li><u>Read the generated file and adjust if needed</u>:</li>
+									<ul>
+
+										<li><code>name:</code> project name</li>
+										<li><code>version:</code> version of your project</li>
+										<li><code>description:</code> project description</li>
+										<li><code>main:</code>this is the JS entry point ( = file that will be served first )</li>
+										<li><code>script:</code>custom script to use by execution <code>npm run &lt;command-name&gt;</code>
+											<br><br>
+										</li>
+									</ul>
+									<li><u>Set and use packages - old ways (<code>require</code> and <code>module.exports</code>) </u></li>
+									<ul>
+
+										<li><code>npm install -g browserify</code>:
+											<br>globally install browserify (to enable the code to understand 
+											<br><code>require</code> keyword on the front-end side).
+											<br><br>
+											
+										</li>
+										<li><code>browserify script.js > bundle.js</code>:
+											<br>will bundle the file <code>script.js</code> to <code>bundle.js</code>.
+											<br>Note: this command need to run at the right directory with the corresponding 
+											<br>file ( script.js being an example here).
+											<br><br>
+
+										</li>
+										<li>Use the bundle:
+											<br>then replace or add the file to the HTML script src instead of the
+											<br><code>script.js</code> file here by <code>bundle.js</code>
+											<br>will bundle the file <code>script.js</code> to <code>bundle.js</code>
+											<br>and import using <code>require</code>
+											<br>Note: need to export the file using <code>require</code> and file with the code to be imported.
+											<br>Note: Each changes applied after the <code>bundle.js</code> has been generated, you need to run the browserify command with the files.
+											<br><br>
+										</li>
+									</ul>
+									<p><i>Implementation of browserify in the site: <a href = "./practices/05_JS-practice_guess-outputs_number-string-boolean-comparisons/">Comparisons exercise</a></i></p>
+									</li>
+								</ol>
+							</div>
+						</details>
+						
 					</section>
 				</div>
 			</main>
