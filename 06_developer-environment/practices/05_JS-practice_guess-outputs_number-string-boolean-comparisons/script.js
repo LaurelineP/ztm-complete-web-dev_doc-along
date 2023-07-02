@@ -403,7 +403,5 @@ const generateFeedbacksSection = (errors) => {
 
 }
 
+
 generateQuiz(EVALUATIONS);
-
-
-export default {generateQuiz, EVALUATIONS}
