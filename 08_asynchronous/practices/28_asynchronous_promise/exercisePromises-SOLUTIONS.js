@@ -1,7 +1,7 @@
 // Solve the questions below:
 
 // #1) Create a promise that resolves in 4 seconds and returns "success" string
-const promise = new Promise((resolve, reject) => {
+const promise1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("success");
   }, 4000)
@@ -14,7 +14,7 @@ promise.then(resp => console.log(resp))
 
 // #3) Read about Promise.resolve() and Promise.reject(). How can you make
 // the above promise shorter with Promise.resolve() and console loggin "success"
-const promise = Promise.resolve(
+const promise2 = Promise.resolve(
   setTimeout(() => {
     console.log("success");
   }, 4000)
