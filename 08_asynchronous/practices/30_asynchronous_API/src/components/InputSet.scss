@@ -1,0 +1,9 @@
+.InputSet {
+	display: flex;
+	flex-direction: row;
+	&-container {
+		display: inherit;
+		flex-direction: column;
+		margin: 5px;
+	}
+}
