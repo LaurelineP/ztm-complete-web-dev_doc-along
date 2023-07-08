@@ -4,22 +4,22 @@ import './InputSet.scss'
 class InputSet extends Component {
 
 	render(){
-		const {name: _name, isDisabled, type, onInput, value, isRandom }  = this.props
-		const name = `input-${_name}`;
+		const { name, isDisabled, type, onChange, value, hasLabel, placeholder, label, checked }  = this.props;
+		const isWChecked = ['radio', 'checkbox'].includes(type)
 		return (
 			<div className = "InputSet">
-				<div className="InputSet-container">
 
-					<label htmlFor={name}>{this.props.name}</label>
+					{ hasLabel && <label htmlFor={name}>{label}</label> }
 
 					<input
 						type={type}
-						disabled={type === 'checkbox' ? isRandom : isDisabled}
+						disabled={isDisabled}
 						name={name}
-						onInput={onInput}
+						onChange={onChange}
+						placeholder={placeholder}
 						value={value}
-						/>
-				</div>
+						{...isWChecked && { checked }}
+					/>
 			</div>
 		)
 	}
